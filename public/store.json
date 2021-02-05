@@ -1,0 +1,671 @@
+{
+  "primes": [
+    {
+      "name": "XF14mmF2.8 R",
+      "type": "prime",
+      "construction": {
+        "elements": 10.0,
+        "groups": 7.0,
+        "details": {
+          "aspherical": 2.0,
+          "extra low dispersion": 3.0
+        }
+      },
+      "focal": 14.0,
+      "angleOfView": 90.8,
+      "aperture": {
+        "max": 2.8,
+        "min": 22.0,
+        "blades": 7.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 300.0,
+        "max": null,
+        "macro": {
+          "min": 180.0,
+          "max": null
+        }
+      },
+      "maxMagnification": 0.12,
+      "dimensions": {
+        "diameter": 65.0,
+        "length": 58.4,
+        "weight": 235.0,
+        "filter": 58.0
+      }
+    },
+    {
+      "name": "XF16mmF1.4 R WR",
+      "construction": {
+        "elements": 13.0,
+        "groups": 11.0,
+        "details": {
+          "aspherical": 2.0,
+          "extra low dispersion": 2.0
+        }
+      },
+      "focal": 16.0,
+      "angleOfView": 83.2,
+      "aperture": {
+        "max": 1.4,
+        "min": 16.0,
+        "blades": 9.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 150.0,
+        "max": null,
+        "macro": {
+          "min": 150.0,
+          "max": null
+        }
+      },
+      "maxMagnification": 0.21,
+      "dimensions": {
+        "diameter": 73.4,
+        "length": 73.0,
+        "weight": 375.0,
+        "filter": 67.0
+      }
+    },
+    {
+      "name": "XF16mmF2.8 R WR",
+      "type": "prime",
+      "construction": {
+        "elements": 10.0,
+        "groups": 8.0,
+        "details": {
+          "aspherical": 2.0
+        }
+      },
+      "focal": 16.0,
+      "angleOfView": 83.2,
+      "aperture": {
+        "max": 2.8,
+        "min": 22.0,
+        "blades": 9.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 170.0,
+        "max": null
+      },
+      "maxMagnification": 0.13,
+      "dimensions": {
+        "diameter": 60.0,
+        "length": 45.4,
+        "weight": 155.0,
+        "filter": 49.0
+      }
+    },
+    {
+      "name": "XF18mmF2 R",
+      "type": "prime",
+      "construction": {
+        "elements": 8.0,
+        "groups": 7.0,
+        "details": {
+          "aspherical": 2.0
+        }
+      },
+      "focal": 18.0,
+      "angleOfView": 76.5,
+      "aperture": {
+        "max": 2.0,
+        "min": 16.0,
+        "blades": 7.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 180.0,
+        "max": null
+      },
+      "maxMagnification": 0.14,
+      "dimensions": {
+        "diameter": 64.5,
+        "length": 33.7,
+        "weight": 116.0,
+        "filter": 52.0
+      }
+    },
+    {
+      "name": "XF23mmF1.4 R",
+      "construction": {
+        "elements": 11.0,
+        "groups": 8.0,
+        "details": {
+          "aspherical": 1.0
+        }
+      },
+      "focal": 23.0,
+      "angleOfView": 63.4,
+      "aperture": {
+        "max": 1.4,
+        "min": 16.0,
+        "blades": 7.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 600.0,
+        "max": null,
+        "macro": {
+          "min": 280.0,
+          "max": null
+        }
+      },
+      "maxMagnification": 0.1,
+      "dimensions": {
+        "diameter": 72.0,
+        "length": 63.0,
+        "weight": 300.0,
+        "filter": 62.0
+      }
+    },
+    {
+      "name": "XF23mmF2 R WR",
+      "type": "prime",
+      "construction": {
+        "elements": 10.0,
+        "groups": 6.0,
+        "details": {
+          "aspherical": 2.0
+        }
+      },
+      "focal": 23.0,
+      "angleOfView": 63.4,
+      "aperture": {
+        "max": 2.0,
+        "min": 16.0,
+        "blades": 9.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 220.0,
+        "max": null
+      },
+      "maxMagnification": 0.13,
+      "dimensions": {
+        "diameter": 60.0,
+        "length": 51.9,
+        "weight": 180.0,
+        "filter": 43.0
+      }
+    },
+    {
+      "name": "XF27mmF2.8",
+      "type": "prime",
+      "construction": {
+        "elements": 7.0,
+        "groups": 5.0,
+        "details": {
+          "aspherical": 1.0
+        }
+      },
+      "focal": 27.0,
+      "angleOfView": 55.5,
+      "aperture": {
+        "max": 2.8,
+        "min": 16.0,
+        "blades": 7.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 600.0,
+        "max": null,
+        "macro": {
+          "min": 340.0,
+          "max": null
+        }
+      },
+      "maxMagnification": 0.1,
+      "dimensions": {
+        "diameter": 61.2,
+        "length": 23.0,
+        "weight": 78.0,
+        "filter": 39.0
+      }
+    },
+    {
+      "name": "XF27mmF2.8 R WR",
+      "type": "prime",
+      "construction": {
+        "elements": 7.0,
+        "groups": 5.0,
+        "details": {
+          "aspherical": 1.0
+        }
+      },
+      "focal": 27.0,
+      "angleOfView": 55.5,
+      "aperture": {
+        "max": 2.8,
+        "min": 16.0,
+        "blades": 7.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 340.0,
+        "max": null,
+        "macro": {
+          "min": null,
+          "max": null
+        }
+      },
+      "maxMagnification": 0.1,
+      "dimensions": {
+        "diameter": 62.0,
+        "length": 23.0,
+        "weight": 84.0,
+        "filter": 39.0
+      }
+    },
+    {
+      "name": "XF35mmF1.4 R",
+      "type": "prime",
+      "construction": {
+        "elements": 8.0,
+        "groups": 6.0,
+        "details": {
+          "aspherical": 1.0
+        }
+      },
+      "focal": 35.0,
+      "angleOfView": 44.2,
+      "aperture": {
+        "max": 1.4,
+        "min": 16.0,
+        "blades": 7.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 280.0,
+        "max": null
+      },
+      "maxMagnification": 0.17,
+      "dimensions": {
+        "diameter": 65.0,
+        "length": 50.4,
+        "weight": 187.0,
+        "filter": 52.0
+      }
+    },
+    {
+      "name": "XF35mmF2 R WR",
+      "type": "prime",
+      "construction": {
+        "elements": 9.0,
+        "groups": 6.0,
+        "details": {
+          "aspherical": 2.0
+        }
+      },
+      "focal": 35.0,
+      "angleOfView": 44.2,
+      "aperture": {
+        "max": 2.0,
+        "min": 16.0,
+        "blades": 9.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 350.0,
+        "max": null
+      },
+      "maxMagnification": 0.135,
+      "dimensions": {
+        "diameter": 60.0,
+        "length": 45.9,
+        "weight": 170.0,
+        "filter": 43.0
+      }
+    },
+    {
+      "name": "XF50mmF1.0 R WR",
+      "type": "prime",
+      "construction": {
+        "elements": 12.0,
+        "groups": 9.0,
+        "details": {
+          "aspherical": 1.0,
+          "extra low dispersion": 2.0
+        }
+      },
+      "focal": 50.0,
+      "angleOfView": 31.7,
+      "aperture": {
+        "max": 1.0,
+        "min": 16.0,
+        "blades": 9.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 700.0,
+        "max": null,
+        "macro": {
+          "min": 700.0,
+          "max": null
+        }
+      },
+      "maxMagnification": 0.08,
+      "dimensions": {
+        "diameter": 87.0,
+        "length": 103.5,
+        "weight": 845.0,
+        "filter": 77.0
+      }
+    },
+    {
+      "name": "XF50mmF2 R WR",
+      "type": "prime",
+      "construction": {
+        "elements": 9.0,
+        "groups": 7.0,
+        "details": {
+          "aspherical extra low dispersion": 1.0
+        }
+      },
+      "focal": 50.0,
+      "angleOfView": 31.7,
+      "aperture": {
+        "max": 2.0,
+        "min": 16.0,
+        "blades": 9.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 390.0,
+        "max": null
+      },
+      "maxMagnification": 0.15,
+      "dimensions": {
+        "diameter": 60.0,
+        "length": 59.4,
+        "weight": 200.0,
+        "filter": 46.0
+      }
+    },
+    {
+      "name": "XF56mmF1.2 R",
+      "type": "prime",
+      "construction": {
+        "elements": 11.0,
+        "groups": 8.0,
+        "details": {
+          "aspherical": 1.0,
+          "extra low dispersion": 2.0
+        }
+      },
+      "focal": 56.0,
+      "angleOfView": 28.5,
+      "aperture": {
+        "max": 1.2,
+        "min": 16.0,
+        "blades": 7.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 700.0,
+        "max": null,
+        "macro": {
+          "min": 700.0,
+          "max": 3000.0
+        }
+      },
+      "maxMagnification": 0.09,
+      "dimensions": {
+        "diameter": 73.2,
+        "length": 69.7,
+        "weight": 405.0,
+        "filter": 62.0
+      }
+    },
+    {
+      "name": "XF56mmF1.2 R APD",
+      "type": "prime",
+      "construction": {
+        "elements": 11.0,
+        "groups": 8.0,
+        "details": {
+          "aspherical": 1.0,
+          "extra low dispersion": 2.0,
+          "apodization filter": 1.0
+        }
+      },
+      "focal": 56.0,
+      "angleOfView": 28.5,
+      "aperture": {
+        "max": 1.2,
+        "min": 16.0,
+        "blades": 7.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 700.0,
+        "max": null,
+        "macro": {
+          "min": 700.0,
+          "max": 3000.0
+        }
+      },
+      "maxMagnification": 0.09,
+      "dimensions": {
+        "diameter": 73.2,
+        "length": 69.7,
+        "weight": 405.0,
+        "filter": 62.0
+      }
+    },
+    {
+      "name": "XF60mmF2.4 R Macro",
+      "type": "prime",
+      "construction": {
+        "elements": 10.0,
+        "groups": 8.0,
+        "details": {
+          "aspherical": 1.0,
+          "abnormal dispersion": 1.0
+        }
+      },
+      "focal": 60.0,
+      "angleOfView": 26.6,
+      "aperture": {
+        "max": 2.4,
+        "min": 22.0,
+        "blades": 9.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 267.0,
+        "max": null
+      },
+      "maxMagnification": 0.5,
+      "dimensions": {
+        "diameter": 64.1,
+        "length": 63.6,
+        "weight": 215.0,
+        "filter": 39.0
+      }
+    },
+    {
+      "name": "XF80mmF2.8 R LM OIS WR Macro",
+      "type": "prime",
+      "construction": {
+        "elements": 16.0,
+        "groups": 12.0,
+        "details": {
+          "aspherical": 1.0,
+          "extra low dispersion": 3.0,
+          "super extra low dispersion": 1.0
+        }
+      },
+      "focal": 80.0,
+      "angleOfView": 20.1,
+      "aperture": {
+        "max": 2.8,
+        "min": 22.0,
+        "blades": 9.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 250.0,
+        "max": null
+      },
+      "maxMagnification": 1.0,
+      "dimensions": {
+        "diameter": 80.0,
+        "length": 130.0,
+        "weight": 750.0,
+        "filter": 62.0
+      }
+    },
+    {
+      "name": "XF90mmF2 R LM WR",
+      "type": "prime",
+      "construction": {
+        "elements": 11.0,
+        "groups": 8.0,
+        "details": {
+          "extra low dispersion": 3.0
+        }
+      },
+      "focal": 90.0,
+      "angleOfView": 17.9,
+      "aperture": {
+        "max": 2.0,
+        "min": 16.0,
+        "blades": 7.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 600.0,
+        "max": null,
+        "macro": {
+          "min": 600.0,
+          "max": null
+        }
+      },
+      "maxMagnification": 0.2,
+      "dimensions": {
+        "diameter": 75.0,
+        "length": 105.0,
+        "weight": 540.0,
+        "filter": 62.0
+      }
+    },
+    {
+      "name": "XF200mmF2 R LM OIS WR",
+      "type": "prime",
+      "construction": {
+        "elements": 19.0,
+        "groups": 14.0,
+        "details": {
+          "extra low dispersion": 2.0,
+          "super extra low dispersion": 1.0
+        }
+      },
+      "focal": 200.0,
+      "angleOfView": 8.1,
+      "aperture": {
+        "max": 2.0,
+        "min": 22.0,
+        "blades": 9.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 1800.0,
+        "max": null
+      },
+      "maxMagnification": 0.12,
+      "dimensions": {
+        "diameter": 122.0,
+        "length": 205.5,
+        "weight": 2265.0,
+        "filter": 105.0
+      }
+    },
+    {
+      "name": "XC35mmF2",
+      "type": "prime",
+      "construction": {
+        "elements": 9.0,
+        "groups": 6.0,
+        "details": {
+          "aspherical": 2.0
+        }
+      },
+      "focal": 35.0,
+      "angleOfView": 44.2,
+      "aperture": {
+        "max": 2.0,
+        "min": 16.0,
+        "blades": 9.0,
+        "type": "rounded",
+        "stops": 0.33
+      },
+      "focusRange": {
+        "min": 350.0,
+        "max": null
+      },
+      "maxMagnification": 0.135,
+      "dimensions": {
+        "diameter": 58.4,
+        "length": 46.5,
+        "weight": 130.0,
+        "filter": 43.0
+      }
+    }
+  ],
+  "teleconverters": [
+    {
+      "name": "XF1.4X TC F2 WR",
+      "type": "teleconverter",
+      "construction": {
+        "elements": 7.0,
+        "groups": 4.0,
+        "details": {
+          "aspherical": 1.0
+        }
+      },
+      "dimensions": {
+        "diameter": 58.0,
+        "length": 15.0,
+        "weight": 130.0
+      }
+    },
+    {
+      "name": "XF2X TC F2 WR",
+      "type": "teleconverter",
+      "construction": {
+        "elements": 9.0,
+        "groups": 5.0,
+        "details": {
+          "aspherical": 1.0
+        }
+      },
+      "dimensions": {
+        "diameter": 58.0,
+        "length": 30.2,
+        "weight": 170.0
+      }
+    }
+  ]
+}
