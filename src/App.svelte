@@ -2,62 +2,101 @@
   import Lense from "./Lense.svelte";
   import Filter from "./Filter.svelte";
 
+  // const pipe = (...functions) => (initial) => functions.reduce((accumulator, current) => current(accumulator), initial)
+    const pipe = (...functions) => {
+        console.log(functions)
+        return (initial) => {
+            console.log(initial)
+            return functions.reduce(
+                (accumulator, current) => {
+                    console.log(current)
+                    return current(accumulator)
+                },
+                initial
+            )
+        }
+    }
+
   export let name;
   
+  let inventory;
   let store;
+
+  let filterWeatherResistance = {
+    name: 'weather-resistance',
+    value: false,
+    filter: (lense => lense.name.includes('WR'))
+  };
+  let filterMacro = {
+    name: 'macro',
+    value: false,
+    filter: (lense =>
+      lense.name.includes('Macro')
+      || lense.focusRange.min <= 300
+      || lense.maxMagnification > 0.3
+    ) 
+  };
+  let filterLowLight = {
+    name: 'low-light',
+    value: false,
+    filter: (lense => lense.aperture.max < 2)
+  };
+  let filterPortrait = {
+    name: 'portrait',
+    value: false,
+    filter: (lense => 
+      (lense.focal < 50 && lense.aperture.max < 2)
+      || (lense.focal >= 50 && lense.aperture.max < 2.4)
+    )
+  };
+  let filterLandscape = {
+    name: 'landscape',
+    value: false,
+    filter: (lense => lense.focal <= 23)
+  };
+  let filterSharpness = {
+    name: 'sharpness',
+    value: false,
+    filter: (lense =>
+      lense.construction.elements > 10
+      && (
+        lense.construction.details['extra low dispersion'] >= 3
+        || lense.construction.details['super extra low dispersion'] > 0
+        )
+    )
+  };
+	let filters = [
+    filterWeatherResistance,
+    filterMacro,
+    filterLowLight,
+    filterPortrait,
+    filterLandscape,
+    filterSharpness,
+  ];
+
+  let storeFilters = pipe(
+    ...filters
+      .filter(filter => filter.value)
+      .map(filter => filter.filter)
+      .concat((lense => lense))
+  )
 
   $: fetch('/store.json')
     .then(r => r.json())
     .then(data => {
-      store = data;
+      inventory = data;
       window.scrollTo(0, 0);
     });
 
-	const filters = [
-    { name: 'weather-resistance', value: false},
-    { name: 'macro', value: false},
-    { name: 'low-light', value: false},
-    { name: 'portrait', value: false},
-    { name: 'landscape', value: false},
-    { name: 'sharpness', value: false},
-  ];
-
-	function toggle(critera) {
-		if (filters[criteria]) {
-			filters[criteria] = !filters[criteria]
-		}
-	}
-
-  function handleKeydown(event) {
-    switch (event.key) {
-    case '1':
-      toggle('isWeatherResistance');
-      break;
-    case '2':
-      toggle('isMacro');
-      break;
-    case '3':
-      toggle('isLowLight');
-      break;
-    case '4':
-      toggle('isPortrait');
-      break;
-    case '5':
-      toggle('isLandscape');
-      break;
-    case '6':
-      toggle('isSharpness');
-      break;
-    }
+  $: if (inventory) {
+    store = inventory.primes.filter(storeFilters)
   }
 </script>
-
-<svelte:window on:keydown={handleKeydown}/>
 
 <main>
   <h1>{name}</h1>
   {#if store}
-    {#each store.primes as lense}
+    {#each store as lense}
       <Lense {lense} />
     {/each}
     <div class="filters">
@@ -102,6 +141,7 @@
   }
 
   .loading {
+    flex-basis: 100%;
     opacity: 0;
     animation: 0.4s 0.8s forwards fade-in;
   }

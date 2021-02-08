@@ -1,9 +1,12 @@
 <script>
+	import { fade } from 'svelte/transition';
+
 	export let lense;
-	export let icon = lense.name.replace(/[\W]+/g, '-');
+
+	let icon = lense.name.replace(/[\W]+/g, '-');
 </script>
 
-<article>
+<article transition:fade>
 	<header>
 		<h2>{lense.name}</h2>
 		<img src="./../lenses/{icon}.jpg" alt="{lense.name}" />
