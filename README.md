@@ -16,6 +16,16 @@ cd svelte-app
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
 
+## TODO
+
+* [ ] add release date to store
+* [ ] add MSRP to store
+* [ ] add reviews to store
+* [ ] add sharpness score from MTF charts
+* [ ] filter by weight
+* [ ] filter by size
+
+
 ## Get started
 
 Install the dependencies...
