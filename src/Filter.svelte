@@ -1,12 +1,13 @@
 <script>
 	export let filter;
-	
+	export let value;
+
 	const label = filter.name;
 </script>
 
 <label>
 	{label}
-	<input type="checkbox" name="{filter.name}" bind:checked={filter.value} />
+	<input type="checkbox" name="{filter.name}" bind:checked={value} />
 </label>
 
 <style>

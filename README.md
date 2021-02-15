@@ -24,6 +24,8 @@ cd svelte-app
 * [ ] add sharpness score from MTF charts
 * [ ] filter by weight
 * [ ] filter by size
+* [ ] add zoom lenses support
+* [ ] add GFX lenses support
 
 
 ## Get started

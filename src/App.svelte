@@ -18,7 +18,7 @@
     }
 
   export let name;
-  
+
   let inventory;
   let store;
 
@@ -34,7 +34,7 @@
       lense.name.includes('Macro')
       || lense.focusRange.min <= 300
       || lense.maxMagnification > 0.3
-    ) 
+    )
   };
   let filterLowLight = {
     name: 'low-light',
@@ -44,7 +44,7 @@
   let filterPortrait = {
     name: 'portrait',
     value: false,
-    filter: (lense => 
+    filter: (lense =>
       (lense.focal < 50 && lense.aperture.max < 2)
       || (lense.focal >= 50 && lense.aperture.max < 2.4)
     )
@@ -74,7 +74,7 @@
     filterSharpness,
   ];
 
-  let storeFilters = pipe(
+  $: storeFilters = pipe(
     ...filters
       .filter(filter => filter.value)
       .map(filter => filter.filter)
@@ -89,7 +89,7 @@
     });
 
   $: if (inventory) {
-    store = inventory.primes.filter(storeFilters)
+    store = JSON.parse(JSON.stringify(inventory.primes.filter(storeFilters)))
   }
 </script>
 
@@ -101,9 +101,12 @@
     {/each}
     <div class="filters">
       {#each filters as filter (filter.name)}
-        <Filter {filter} />
+        <Filter {filter} value="{filter.value}" />
       {/each}
     </div>
+    <pre>
+      {filterSharpness.value}
+    </pre>
   {:else}
     <p class="loading">loading...</p>
   {/if}
