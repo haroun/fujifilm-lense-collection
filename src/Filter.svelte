@@ -1,19 +1,24 @@
 <script>
-	export let filter;
-	export let value;
+  import {createEventDispatcher} from 'svelte';
 
-	const label = filter.name;
+  export let filter;
+
+  const dispatch = createEventDispatcher();
+
+  function toggleFilter() {
+    dispatch('toggleFilter', {name: filter.name, value: filter.value})
+  }
 </script>
 
 <label>
-	{label}
-	<input type="checkbox" name="{filter.name}" bind:checked={value} />
+  {filter.name}
+  <input type="checkbox" name="{filter.name}" bind:checked={filter.value} on:change={toggleFilter} />
 </label>
 
 <style>
-	label {
-		flex: 1 1 auto;
-		border-left: 1px dotted #dedede;
-		border-right: 1px dotted #dedede;
-	}
+  label {
+    flex: 1 1 auto;
+    border-left: 1px dotted #dedede;
+    border-right: 1px dotted #dedede;
+  }
 </style>
