@@ -1,7 +1,7 @@
 <script>
   import Lense from "./Lense.svelte";
   import Filter from "./Filter.svelte";
-  import Console  from "./Console.svelte";
+  // import Console  from "./Console.svelte";
 
   const pipe = (...functions) => (initial) => functions.reduce((accumulator, current) => current(accumulator), initial)
 
@@ -13,16 +13,16 @@
   let filterWeatherResistance = {
     name: 'weather-resistance',
     value: true,
-    filter: (lense => lense.name.includes('WR') && lense)
+    filter: (lense => lense?.name?.includes('WR') && lense)
   };
   let filterMacro = {
     name: 'macro',
     value: true,
     filter: (lense =>
       (
-        lense.name.includes('Macro')
-        || lense.focusRange.min <= 300
-        || lense.maxMagnification > 0.3
+        lense?.name?.includes('Macro')
+        || lense?.focusRange?.min <= 300
+        || lense?.maxMagnification > 0.3
       )
       && lense
     )
@@ -30,15 +30,15 @@
   let filterLowLight = {
     name: 'low-light',
     value: false,
-    filter: (lense => lense.aperture.max < 2 && lense)
+    filter: (lense => lense?.aperture?.max < 2 && lense)
   };
   let filterPortrait = {
     name: 'portrait',
     value: false,
     filter: (lense =>
       (
-        (lense.focal < 50 && lense.aperture.max < 2)
-        || (lense.focal >= 50 && lense.aperture.max < 2.4)
+        (lense?.focal < 50 && lense?.aperture?.max < 2)
+        || (lense?.focal >= 50 && lense?.aperture?.max < 2.4)
       )
       && lense
     )
@@ -46,16 +46,16 @@
   let filterLandscape = {
     name: 'landscape',
     value: false,
-    filter: (lense => lense.focal <= 23 && lense)
+    filter: (lense => lense?.focal <= 23 && lense)
   };
   let filterSharpness = {
     name: 'sharpness',
     value: false,
     filter: (lense =>
-      lense.construction.elements > 10
+      lense?.construction?.elements > 10
       && (
-        lense.construction.details['extra low dispersion'] >= 3
-        || lense.construction.details['super extra low dispersion'] > 0
+        lense?.construction?.details?.['extra low dispersion'] >= 3
+        || lense?.construction?.details?.['super extra low dispersion'] > 0
       )
       && lense
     )
@@ -87,7 +87,6 @@
     ...(filters
       .filter(filter => filter?.value)
       .map(filter => filter?.filter)
-      //.concat((lense => lense)))
     )
   )
   $: if (inventory) {
@@ -97,16 +96,15 @@
 
 <main>
   <h1>{name}</h1>
-  <Console />
   {#if store}
-    {#each store as lense (lense.name)}
-      <Lense {lense} />
-    {/each}
     <div class="filters">
       {#each filters as filter (filter.name)}
         <Filter {filter} on:toggleFilter={handleToggleFilter} />
       {/each}
     </div>
+    {#each store as lense (lense.name)}
+      <Lense {lense} />
+    {/each}
   {:else}
     <p class="loading">loading...</p>
   {/if}

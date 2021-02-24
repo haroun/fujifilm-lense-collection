@@ -26,6 +26,16 @@
   window.addEventListener('error', function(event) {
     window.console.error(event);
   });
+
+  window.onrejectionhandled = function(event) {
+    window.console.error(event.reason)
+  }
+  window.addEventListener('unhandledrejection', function(event) {
+    window.console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
+  });
+  window.onunhandledrejection = function(event) {
+    window.console.error(event.reason)
+  }
 </script>
 
 <pre>
