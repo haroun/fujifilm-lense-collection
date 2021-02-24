@@ -12,12 +12,12 @@
 
   let filterWeatherResistance = {
     name: 'weather-resistance',
-    value: true,
+    value: false,
     filter: (lense => lense?.name?.includes('WR') && lense)
   };
   let filterMacro = {
     name: 'macro',
-    value: true,
+    value: false,
     filter: (lense =>
       (
         lense?.name?.includes('Macro')
